@@ -25,3 +25,24 @@
     font-weight: 400;
     font-style: normal;
 }
+
+body {
+    font-family: 'Minecraft', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+strong em {
+    font-weight: 700;
+    font-style: italic;
+}
