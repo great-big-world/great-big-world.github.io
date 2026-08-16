@@ -69,18 +69,17 @@ strong em {
 
 .rounded-rect {
     background-color: #31344f;
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 8px;
     color: white;
-    display: inline-block;
     font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
 .rounded-rect a {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-    transition: background-color 0.3s ease;
 }
 
 .rounded-rect a:hover {
