@@ -8,6 +8,18 @@ class NavBar extends HTMLElement {
 
         shadow.innerHTML = `
             <link rel="stylesheet" href="${new URL('style.css', root)}">
+            
+            <style>
+                .desktop-only {
+                    display: none;
+                }
+        
+                @media screen and (min-width: 768px) {
+                    .desktop-only {
+                        display: inline-block;
+                    }
+                }
+            </style>
 
             <header class="header-bar" style="background-image: url('${new URL('assets/backgrounds/polished_oak_planks.png', root)}'); background-size: 44px 44px;">
                 <nav>
@@ -23,7 +35,7 @@ class NavBar extends HTMLElement {
                             <a href="${new URL('pages/changelog.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/changelog.png', root)}" class="header-icon" alt="Changelog">
-                                    Changelog
+                                    <div class="desktop-only">Changelog</div>
                                 </div>
                             </a>
                         </li>
@@ -32,7 +44,7 @@ class NavBar extends HTMLElement {
                             <a href="${new URL('pages/download.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/download.png', root)}" class="header-icon" alt="Download">
-                                    Download
+                                    <div class="desktop-only">Download</div>
                                 </div>
                             </a>
                         </li>
@@ -41,7 +53,7 @@ class NavBar extends HTMLElement {
                             <a href="${new URL('pages/roadmap.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/roadmap.png', root)}" class="header-icon" alt="Roadmap">
-                                    Roadmap
+                                    <div class="desktop-only">Roadmap</div>
                                 </div>
                             </a>
                         </li>
@@ -50,7 +62,7 @@ class NavBar extends HTMLElement {
                             <a href="${new URL('pages/wiki.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/wiki.png', root)}" class="header-icon" alt="Wiki">
-                                    Wiki
+                                    <div class="desktop-only">Wiki</div>
                                 </div>
                             </a>
                         </li>

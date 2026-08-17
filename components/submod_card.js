@@ -7,6 +7,12 @@ class SubmodCard extends HTMLElement {
         shadow.innerHTML = `
             <link rel="stylesheet" href="../style.css">
             
+            <style>
+                .card-content {
+                    font-size: var(--card-font-size, 100%);
+                }
+            </style>
+            
             <a class="card">
                 <img src="" alt="">
                 <div class="card-content">
