@@ -132,7 +132,7 @@ strong em {
 .rounded-rect {
     background-color: #000000aa;
     border-radius: 8px;
-    padding: 8px;
+    padding: 8px 8px 6px;
     color: #f5f9fa;
     display: inline-block;
     font-weight: 700;
