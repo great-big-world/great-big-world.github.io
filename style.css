@@ -107,6 +107,16 @@ strong em {
     user-select: none;
 }
 
+.footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    image-rendering: pixelated;
+    user-select: none;
+}
+
+
 .nav-links {
     display: flex;
     gap: 8px;
@@ -200,8 +210,24 @@ strong em {
     color: #f5f9fa;
     background-color: #000000aa;
     padding-left: 2%;
+    overflow: hidden;
 }
 
-.card-content h3 {
+.card-title {
     margin: 0;
+}
+
+.card-description {
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.6s ease;
+    font-size: 45%;
+    padding-top: 2%;
+}
+
+.card:hover .card-description {
+    max-height: 100px;
+    opacity: 1;
 }

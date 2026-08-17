@@ -1,4 +1,4 @@
-class NavBar extends HTMLElement {
+class Header extends HTMLElement {
     constructor() {
         super();
 
@@ -81,7 +81,7 @@ class NavBar extends HTMLElement {
             'chiseled_oak_log.png'
         ];
 
-        let currentBackground = -1;
+        let currentBackground = 0;
 
         const button = this.shadowRoot.querySelector('#random-background');
 
@@ -99,4 +99,4 @@ class NavBar extends HTMLElement {
     }
 }
 
-customElements.define('gbw-navbar', NavBar);
+customElements.define('gbw-header', Header);

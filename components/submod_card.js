@@ -28,13 +28,15 @@ class SubmodCard extends HTMLElement {
             <a class="card">
                 <img src="" alt="">
                 <div class="card-content">
-                    <h3></h3>
+                    <p class="card-description"></p>
+                    <p class="card-title"></p>                
                 </div>
             </a>
         `;
 
         this.img = shadow.querySelector('img');
-        this.cardContent = shadow.querySelector('.card-content');
+        this.cardTitle = shadow.querySelector('.card-title');
+        this.cardDescription = shadow.querySelector('.card-description');
         this.link = shadow.querySelector('a');
     }
 
@@ -42,7 +44,8 @@ class SubmodCard extends HTMLElement {
         this.img.src = this.getAttribute('img-src');
         this.img.alt = this.getAttribute('name') || '';
 
-        this.cardContent.textContent = this.getAttribute('name');
+        this.cardTitle.textContent = this.getAttribute('name');
+        this.cardDescription.textContent = this.getAttribute('description') || 'example description';
 
         this.link.href = this.getAttribute('page');
     }
