@@ -9,7 +9,7 @@ class Header extends HTMLElement {
         shadow.innerHTML = `
             <link rel="stylesheet" href="${new URL('style.css', root)}">
             
-            <header class="footer-bar">
+            <footer class="footer-bar">
                 <nav>
                     <ul class="nav-links">
 
@@ -47,7 +47,7 @@ class Header extends HTMLElement {
 
                     </ul>
                 </nav>
-            </header>
+            </footer>
         `;
     }
 }

@@ -34,8 +34,20 @@ h1 {
     text-align: center
 }
 
-body {
+main,body {
     font-family: 'Minecraft', sans-serif;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 p {
@@ -112,10 +124,10 @@ strong em {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    margin-top: auto;
     image-rendering: pixelated;
     user-select: none;
 }
-
 
 .nav-links {
     display: flex;
