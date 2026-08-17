@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Test</title>
+    <script type="module" src="components/navbar.js"></script>
+    <script type="module" src="components/submod_card.js"></script>
+    <title>Great Big World</title>
 </head>
-<body>
+<body class="page">
 
-    <header class="header-bar">
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <div class="rounded-rect"><a href="#">Sub-Mods</a></div>
-                </li>
-                <li>
-                    <div class="rounded-rect"><a href="#">Changelog</a></div>
-                </li>
-                <li>
-                    <div class="rounded-rect"><a href="#">News</a></div>
-                </li>
-                <li>
-                    <div class="rounded-rect"><a href="#">Roadmap</a></div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic paragraph of text on your new webpage.</p>
+    <gbw-navbar></gbw-navbar>
+
+    <h1>Welcome to Great Big World</h1>
+    <p class="subtitle">An alternate timeline mod for modern Minecraft</p>
+
+    <h1 class="section-header">Explore</h1>
+
+    <div class="submods-grid">
+        <gbw-submod-card name="Core" page="../pages/submods/gbw_core.html" img-src="../assets/backgrounds/architects_assembly.png"></gbw-submod-card>
+        <gbw-submod-card name="Adventures" page="../pages/submods/adventures.html" img-src="../assets/backgrounds/architects_assembly.png"></gbw-submod-card>
+        <gbw-submod-card name="Architect's Assembly" page="../pages/submods/architects_assembly.html" img-src="../assets/backgrounds/architects_assembly.png"></gbw-submod-card>
+        <gbw-submod-card name="Flora & Fauna" page="../pages/submods/flora_and_fauna.html" img-src="../assets/backgrounds/flora_and_fauna.png"></gbw-submod-card>
+        <gbw-submod-card name="Relics & Ruins" page="../pages/submods/relics_and_ruins.html" img-src="../assets/backgrounds/relics_and_ruins.png"></gbw-submod-card>
+        <gbw-submod-card name="Swords & Shields" page="../pages/submods/swords_and_shields.html" img-src="../assets/backgrounds/swords_and_shields.png"></gbw-submod-card>
+        <gbw-submod-card name="The Alterworld" page="../pages/submods/the_alterworld.html" img-src="../assets/backgrounds/the_alterworld.png"></gbw-submod-card>
+        <gbw-submod-card name="Standalone Mods" page="../pages/submods/standalone_submods.html" img-src="../assets/backgrounds/architects_assembly.png"></gbw-submod-card>
+    </div>
 
 </body>
 </html>
