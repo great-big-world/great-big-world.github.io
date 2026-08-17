@@ -49,6 +49,12 @@ class Header extends HTMLElement {
                 </nav>
             </footer>
         `;
+
+        shadow.querySelectorAll('img').forEach(img => {
+            img.addEventListener('dragstart', event => {
+                event.preventDefault();
+            });
+        });
     }
 }
 

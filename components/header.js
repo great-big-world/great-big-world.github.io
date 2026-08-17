@@ -76,9 +76,20 @@ class Header extends HTMLElement {
             </header>
         `;
 
+        shadow.querySelectorAll('img').forEach(img => {
+            img.addEventListener('dragstart', event => {
+                event.preventDefault();
+            });
+        });
+
         const backgrounds = [
             'polished_oak_planks.png',
-            'chiseled_oak_log.png'
+            'chiseled_oak_log.png',
+            'chiseled_oak_planks.png',
+            'stripped_chiseled_oak_log.png',
+            'cobblestone_bricks.png',
+            'chiseled_cobblestone_bricks.png',
+            'cobblestone_brick_pillar_top.png'
         ];
 
         let currentBackground = 0;

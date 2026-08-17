@@ -71,6 +71,8 @@ strong em {
     image-rendering: pixelated;
     width:14px;
     height:14px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .page {
@@ -152,10 +154,18 @@ strong em {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .rounded-rect:hover {
     background-color: #000000cc;
+}
+
+.nav-links a,
+.footer-bar a {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .section-header {
@@ -202,6 +212,7 @@ strong em {
     position: relative;
     user-select: none;
     transition: transform 0.3s ease, filter 0.15s ease;
+    -webkit-user-drag: none;
 }
 
 .card:hover {
@@ -213,6 +224,8 @@ strong em {
     display: block;
     width: 100%;
     height: auto;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .card-content {
