@@ -9,7 +9,13 @@ class SubmodCard extends HTMLElement {
             
             <style>
                 .card-content {
-                    font-size: var(--card-font-size, 100%);
+                    font-size: 200%;
+                }
+                
+                @media screen and (max-width: 767px) {
+                    .card-content {
+                        font-size: 80%;
+                    }
                 }
             </style>
             
