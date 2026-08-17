@@ -12,9 +12,21 @@ class SubmodCard extends HTMLElement {
                     font-size: 200%;
                 }
                 
+                @media screen and (max-width: 1080px) {
+                    .card-content {
+                        font-size: 120%;
+                    }
+                }
+                
                 @media screen and (max-width: 767px) {
                     .card-content {
-                        font-size: 80%;
+                        font-size: 75%;
+                    }
+                }
+                
+                @media screen and (max-width: 412px) {
+                    .card-content {
+                        font-size: 25%;
                     }
                 }
             </style>
