@@ -104,6 +104,7 @@ strong em {
     image-rendering: pixelated;
     background-color: #30525c;
     padding-right: 2%;
+    user-select: none;
 }
 
 .nav-links {
@@ -115,7 +116,6 @@ strong em {
 .nav-links li {
     list-style: none;
     text-decoration: none;
-    user-select: none;
     align-items: center;
 }
 
@@ -147,6 +147,32 @@ strong em {
     gap: 20px;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+@media screen and (max-width: 767px) {
+    .section-header {
+        padding-left: 5%;
+    }
+
+    .submods-grid {
+        grid-template-columns: repeat(3, 2fr);
+        gap: 12px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .section-header {
+        padding-left: 2%;
+    }
+
+    .submods-grid {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 8px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
 }
 
 .card {
