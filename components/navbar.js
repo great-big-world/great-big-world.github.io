@@ -2,40 +2,64 @@ class NavBar extends HTMLElement {
     constructor() {
         super();
 
+        const root = new URL('../', import.meta.url);
+
         const shadow = this.attachShadow({ mode: 'open' });
 
         shadow.innerHTML = `
-            <link rel="stylesheet" href="../style.css">
-            
-            <header class="header-bar" style="background-image: url('../assets/backgrounds/polished_oak_planks.png'); background-size: 44px 44px;">
+            <link rel="stylesheet" href="${new URL('style.css', root)}">
+
+            <header class="header-bar" style="background-image: url('${new URL('assets/backgrounds/polished_oak_planks.png', root)}'); background-size: 44px 44px;">
                 <nav>
                     <ul class="nav-links">
+
                         <li class="logo">
-                            <a href="../index.html"><img src="../assets/icons/logo.png" alt="Home"></a>
+                            <a href="${new URL('index.html', root)}">
+                                <img src="${new URL('assets/icons/logo.png', root)}" alt="Home">
+                            </a>
                         </li>
+
                         <li>
-                            <a href="../pages/changelog.html"><div class="rounded-rect">
-                                <img src="../assets/icons/changelog.png" class="pixel-art" alt="Changelog" style="width:14px;height:14px;">
-                                Changelog
-                            </div></a>
+                            <a href="${new URL('pages/changelog.html', root)}">
+                                <div class="rounded-rect">
+                                    <img src="${new URL('assets/icons/changelog.png', root)}" class="header-icon" alt="Changelog">
+                                    Changelog
+                                </div>
+                            </a>
                         </li>
+
                         <li>
-                            <a href="../pages/download.html"><div class="rounded-rect">
-                                <img src="../assets/icons/download.png" class="pixel-art" alt="Download" style="width:14px;height:14px;">
-                                Download
-                            </div></a>
+                            <a href="${new URL('pages/download.html', root)}">
+                                <div class="rounded-rect">
+                                    <img src="${new URL('assets/icons/download.png', root)}" class="header-icon" alt="Download">
+                                    Download
+                                </div>
+                            </a>
                         </li>
+
                         <li>
-                            <a href="#"><div class="rounded-rect">
-                                <img src="../assets/icons/roadmap.png" class="pixel-art" alt="Download" style="width:14px;height:14px;">
-                                Roadmap
-                            </div></a>
+                            <a href="${new URL('pages/roadmap.html', root)}">
+                                <div class="rounded-rect">
+                                    <img src="${new URL('assets/icons/roadmap.png', root)}" class="header-icon" alt="Roadmap">
+                                    Roadmap
+                                </div>
+                            </a>
                         </li>
+
+                        <li>
+                            <a href="${new URL('pages/wiki.html', root)}">
+                                <div class="rounded-rect">
+                                    <img src="${new URL('assets/icons/wiki.png', root)}" class="header-icon" alt="Wiki">
+                                    Wiki
+                                </div>
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
-                
+
                 <button class="rounded-rect" id="random-background">
-                    <img src="../assets/icons/update.png" class="pixel-art" alt="Refresh Background Color" style="width:14px;height:14px;">
+                    <img src="${new URL('assets/icons/update.png', root)}" class="header-icon" alt="Refresh Background">
                 </button>
             </header>
         `;

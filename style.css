@@ -26,6 +26,12 @@
     font-style: normal;
 }
 
+@media screen and (max-width: 767px) {
+    .submods-grid {
+        font-size: 100%;
+    }
+}
+
 h1 {
     text-align: center
 }
@@ -55,8 +61,10 @@ strong em {
     font-style: italic;
 }
 
-.pixel-art {
+.header-icon {
     image-rendering: pixelated;
+    width:14px;
+    height:14px;
 }
 
 .page {
