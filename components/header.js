@@ -21,7 +21,7 @@ class Header extends HTMLElement {
                 }
             </style>
 
-            <header class="header-bar" style="background-image: url('${new URL('assets/backgrounds/polished_oak_planks.png', root)}'); background-size: 44px 44px;">
+            <header class="header-bar" style="padding-left: -2px; background-image: url('${new URL('assets/backgrounds/polished_oak_planks.png', root)}'); background-size: 44px 44px;">
                 <nav>
                     <ul class="nav-links">
 
