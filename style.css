@@ -275,8 +275,12 @@ strong em {
     background-color: #000000cc;
 }
 
-.version-title, .version-type, .version-url, .version-download-count {
+.version-title, .version-type, .version-url {
     display: inline-block;
+}
+
+.great-big-world-title, .version-download-count {
+    display: none;
 }
 
 .version-type {
@@ -286,6 +290,12 @@ strong em {
 .version-download-count {
     text-decoration: none;
     color: #f5f9fa;
+}
+
+@media screen and (min-width: 850px) {
+    .great-big-world-title, .version-download-count {
+        display: inline-block;
+    }
 }
 
 .download-icon {

@@ -38,7 +38,7 @@
             versions.forEach(version => {
                 const card = document.createElement('gbw-version-card');
 
-                card.setAttribute("version-title", version.name);
+                card.setAttribute("version-number", version.version_number);
                 card.setAttribute("version-type", version.version_type);
                 card.setAttribute("version-downloads", version.downloads);
                 card.setAttribute("version-url", version.id);
