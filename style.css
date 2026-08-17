@@ -81,18 +81,21 @@ strong em {
     background-size: 44px 44px;
     image-rendering: pixelated;
     background-color: #070e0f;
+    position: relative;
 }
 
 .page::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     pointer-events: none;
+    z-index: 0;
 }
 
 .page > * {
     position: relative;
+    z-index: 1;
 }
 
 .logo {
@@ -255,4 +258,59 @@ strong em {
 .card:hover .card-description {
     max-height: 100px;
     opacity: 1;
+}
+
+.version-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 5% 0;
+    margin-bottom: 10px;
+    background-color: #00000099;
+    transition: background-color 0.3s ease;
+    max-height: 50px;
+}
+
+.version-entry:hover {
+    background-color: #000000cc;
+}
+
+.version-title, .version-type, .version-url, .version-download-count {
+    display: inline-block;
+}
+
+.version-type {
+    flex: 1;
+}
+
+.version-download-count {
+    text-decoration: none;
+    color: #f5f9fa;
+}
+
+.download-icon {
+    image-rendering: pixelated;
+    width:24px;
+    height:24px;
+}
+
+.modrinth-url:link {
+    color: #1bd96a;
+}
+
+.modrinth-url:visited {
+    color: #10c0e7;
+}
+
+.modrinth-url:active {
+    color: #96ffc2;
+}
+
+.version-type-label {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
 }
