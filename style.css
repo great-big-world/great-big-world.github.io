@@ -275,15 +275,15 @@ strong em {
     background-color: #000000cc;
 }
 
-.version-title, .version-type, .version-url {
+.version-title, .version-number, .version-url {
     display: inline-block;
 }
 
 .great-big-world-title, .version-download-count {
-    display: none;
+    display: inline-block;
 }
 
-.version-type {
+.version-number {
     flex: 1;
 }
 
@@ -292,16 +292,10 @@ strong em {
     color: #f5f9fa;
 }
 
-@media screen and (min-width: 850px) {
-    .great-big-world-title, .version-download-count {
-        display: inline-block;
-    }
-}
-
 .download-icon {
     image-rendering: pixelated;
-    width:24px;
-    height:24px;
+    width: 24px;
+    height: 24px;
 }
 
 .modrinth-url:link {
@@ -320,7 +314,25 @@ strong em {
     display: inline-block;
     padding: 4px 10px;
     border-radius: 8px;
-    font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 855px) {
+    .great-big-world-title, .version-download-count {
+        display: none;
+    }
+
+    .version-number, .version-url {
+        font-size: 130%;
+    }
+
+    .version-type-label {
+        font-size: 60%;
+    }
+
+    .download-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
