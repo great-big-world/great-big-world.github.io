@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../js/download.js"></script>
     <script type="module" src="../components/header.js"></script>
     <script type="module" src="../components/version_type_label.js"></script>
     <script type="module" src="../components/version_card.js"></script>
@@ -24,31 +25,6 @@
 
         <div id="versions-list"></div>
     </main>
-
-    <script>
-        const versionsList = document.getElementById('versions-list');
-
-        async function getVersions() {
-            const response = await fetch(
-                "https://api.modrinth.com/v2/project/great-big-world/version?include_changelog=false"
-            );
-
-            const versions = await response.json();
-
-            versions.forEach(version => {
-                const card = document.createElement('gbw-version-card');
-
-                card.setAttribute("version-number", version.version_number);
-                card.setAttribute("version-type", version.version_type);
-                card.setAttribute("version-downloads", version.downloads);
-                card.setAttribute("version-url", version.id);
-
-                versionsList.appendChild(card);
-            });
-        }
-
-        getVersions();
-    </script>
 
     <gbw-footer></gbw-footer>
 

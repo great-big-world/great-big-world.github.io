@@ -96,17 +96,21 @@ class Header extends HTMLElement {
 
         const button = this.shadowRoot.querySelector('#random-background');
 
-        button.addEventListener('click', () => {
-            let newBackground;
+        if (!this.getAttribute('home')) {
+            button.display = "none"
+        } else {
+            button.addEventListener('click', () => {
+                let newBackground;
 
-            do {
-                newBackground = Math.floor(Math.random() * backgrounds.length);
-            } while (newBackground === currentBackground);
+                do {
+                    newBackground = Math.floor(Math.random() * backgrounds.length);
+                } while (newBackground === currentBackground);
 
-            currentBackground = newBackground;
+                currentBackground = newBackground;
 
-            document.body.style.backgroundImage = `url('assets/backgrounds/${backgrounds[currentBackground]}')`;
-        });
+                document.body.style.backgroundImage = `url('assets/backgrounds/${backgrounds[currentBackground]}')`;
+            });
+        }
     }
 }
 
