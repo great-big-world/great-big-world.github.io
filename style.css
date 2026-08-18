@@ -361,6 +361,7 @@ strong em {
     align-items: center;
     font-size: 150%;
     gap: 16px;
+    padding-left: 5%;
 }
 
 .mod-group:hover {
@@ -386,50 +387,50 @@ strong em {
     text-decoration: underline white;
 }
 
+.mod-feature-carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .mod-feature-carousel {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    padding-left: 5%;
     gap: 16px;
-    width: 98em;
-    max-width: 100%;
-    margin-inline: auto;
-    margin: 0 auto;
-    overflow-x: auto;
+    height: 720px;
+    width: 50%;
+    overflow-y: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: y mandatory;
     scroll-marker-group: after;
 }
 
 .mod-feature-carousel::after {
     content: '';
-    flex: 0 0 calc(100% - 30em);
+    flex: 0 0 100px;
 }
 
 .mod-feature-carousel::-webkit-scrollbar {
     display: none;
 }
 
-.mod-feature-carousel::scroll-button(right) {
-    content: '>';
-}
-
-.mod-feature-carousel::scroll-button(left) {
-    content: '<';
-}
-
 .mod-feature-carousel::scroll-marker-group {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 6px;
+    position: absolute;
+    left: calc(5% + 500px);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .feature-carousel-card {
     box-sizing: border-box;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    flex: 0 0 30em;
-    height: 300px;
-    max-height: 315px;
+    flex: 0 0 300px;
+    width: 50%;
     text-align: center;
     background-color: white;
     padding: 8px;

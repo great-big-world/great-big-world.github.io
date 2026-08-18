@@ -16,8 +16,8 @@ class ModPage extends HTMLElement {
                 </nav>
             </div>
             
-            <div class="mod-feature-carousel">
-                
+            <div class="feature-carousel-wrapper">
+                <div class="mod-feature-carousel"></div>
             </div>
         `;
 
