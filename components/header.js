@@ -10,6 +10,25 @@ class Header extends HTMLElement {
             <link rel="stylesheet" href="${new URL('style.css', root)}">
             
             <style>
+                .header-bar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 98%;
+                
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                
+                    image-rendering: pixelated;
+                    background-color: #30525c;
+                    padding-right: 2%;
+                
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                }
+
                 .desktop-only {
                     display: none;
                 }
@@ -97,7 +116,7 @@ class Header extends HTMLElement {
         const button = this.shadowRoot.querySelector('#random-background');
 
         if (!this.getAttribute('home')) {
-            button.display = "none"
+            button.style.display = "none"
         } else {
             button.addEventListener('click', () => {
                 let newBackground;

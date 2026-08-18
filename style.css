@@ -140,7 +140,7 @@ strong em {
     z-index: 0;
 }
 
-.page > *:not(.header-bar):not(.footer-bar) {
+.page > *:not(gbw-header):not(gbw-footer) {
     position: relative;
     z-index: 1;
 }
@@ -164,20 +164,9 @@ strong em {
     filter: brightness(0.8);
 }
 
-.header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    image-rendering: pixelated;
-    background-color: #30525c;
-    padding-right: 2%;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+gbw-header {
+    position: relative;
+    z-index: 3;
 }
 
 .footer-bar {
@@ -186,7 +175,7 @@ strong em {
     align-items: center;
     position: fixed;
     bottom: 0;
-    z-index: 1000;
+    z-index: 3;
     margin-top: auto;
     image-rendering: pixelated;
     user-select: none;
