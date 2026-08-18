@@ -289,6 +289,7 @@ strong em {
 
 .version-title, .version-number, .version-url {
     display: inline-block;
+    text-decoration: none;
 }
 
 .version-url {

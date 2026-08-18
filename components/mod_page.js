@@ -7,7 +7,7 @@ class ModPage extends HTMLElement {
         const shadow = this.attachShadow({ mode: 'open' });
 
         shadow.innerHTML = `
-            <link rel="stylesheet" href="../style.css">
+            <link rel="stylesheet" href="../../style.css">
             
             <div>
                 <nav class="mod-group-navbar">

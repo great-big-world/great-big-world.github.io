@@ -32,7 +32,7 @@ class Header extends HTMLElement {
                         </li>
 
                         <li>
-                            <a href="${new URL('pages/changelog.html', root)}">
+                            <a href="${new URL('changelog.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/changelog.png', root)}" class="header-icon" alt="Changelog">
                                     <div class="desktop-only">Changelog</div>
@@ -41,7 +41,7 @@ class Header extends HTMLElement {
                         </li>
 
                         <li>
-                            <a href="${new URL('pages/download.html', root)}">
+                            <a href="${new URL('download.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/download.png', root)}" class="header-icon" alt="Download">
                                     <div class="desktop-only">Download</div>
@@ -50,7 +50,7 @@ class Header extends HTMLElement {
                         </li>
 
                         <li>
-                            <a href="${new URL('pages/roadmap.html', root)}">
+                            <a href="${new URL('roadmap.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/roadmap.png', root)}" class="header-icon" alt="Roadmap">
                                     <div class="desktop-only">Roadmap</div>
@@ -59,7 +59,7 @@ class Header extends HTMLElement {
                         </li>
 
                         <li>
-                            <a href="${new URL('pages/wiki.html', root)}">
+                            <a href="${new URL('wiki.html', root)}">
                                 <div class="rounded-rect">
                                     <img src="${new URL('assets/icons/wiki.png', root)}" class="header-icon" alt="Wiki">
                                     <div class="desktop-only">Wiki</div>
