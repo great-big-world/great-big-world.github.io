@@ -388,7 +388,7 @@ strong em {
 .mod-feature-carousel {
     display: flex;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 16px;
     width: 98em;
     max-width: 100%;
     margin-inline: auto;
