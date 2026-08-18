@@ -32,13 +32,6 @@ h1 {
 
 .subtitle {
     text-align: center;
-}
-
-.subtitle-flex {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 8px;
     padding-bottom: 8px;
 }
 
@@ -86,7 +79,9 @@ strong em {
 }
 
 .info-button {
-    display: flex;
+    color: #4f9cff;
+    display: inline;
+    cursor: pointer;
     margin-top: 2px;
     user-select: none;
     -webkit-user-select: none;
@@ -94,22 +89,16 @@ strong em {
     -webkit-user-drag: none;
 }
 
-.info-button img {
-    cursor: pointer;
-    image-rendering: pixelated;
-    width:14px;
-    height:14px;
-}
-
-.info-button:hover .info-message {
+.info-button:hover + .info-message {
     opacity: 1;
     visibility: visible;
 }
 
 .info-message {
+    color: white;
     position: absolute;
     padding: 2px;
-    margin-left: 20px;
+    margin-left: 55%;
     background-color: red;
     max-width: 200px;
     width: max-content;
@@ -120,6 +109,22 @@ strong em {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+@media screen and (max-width: 767px) {
+    .info-message {
+        font-size: 85%;
+        max-width: 175px;
+        margin-left: 43%;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .info-message {
+        font-size: 70%;
+        max-width: 150px;
+        margin-left: 20%;
+    }
 }
 
 .page {
