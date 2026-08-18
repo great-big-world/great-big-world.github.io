@@ -5,22 +5,31 @@ export async function getModData(modId, modGroups, modFeatureCarousel) {
 
     const data = await response.json();
 
-    data.groups.forEach(group => {
+    data.groups.forEach((group, index) => {
         const groupElement = document.createElement("li");
-        groupElement.className = 'mod-group'
-        groupElement.textContent = group.name
+        groupElement.className = 'mod-group';
+        groupElement.textContent = group.name;
 
         groupElement.addEventListener('click', () => {
-            modGroups.querySelectorAll('.mod-group').forEach(element => {
-                element.classList.remove('selected');
-            });
-
-            groupElement.classList.add('selected');
-            displayFeatures(group.features, modFeatureCarousel);
+            selectGroup(groupElement, group, modGroups, modFeatureCarousel);
         });
 
         modGroups.appendChild(groupElement);
+
+        if (index === 0) {
+            selectGroup(groupElement, group, modGroups, modFeatureCarousel);
+        }
     });
+}
+
+function selectGroup(groupElement, group, modGroups, modFeatureCarousel) {
+    modGroups.querySelectorAll('.mod-group').forEach(element => {
+        element.classList.remove('selected');
+    });
+
+    groupElement.classList.add('selected');
+
+    displayFeatures(group.features, modFeatureCarousel);
 }
 
 function displayFeatures(features, modFeatureCarousel) {
