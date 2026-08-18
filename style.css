@@ -34,7 +34,15 @@ h1 {
     text-align: center;
 }
 
-main,body {
+.subtitle-flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+main, body {
     font-family: 'Minecraft', sans-serif;
     min-height: 100%;
     margin: 0;
@@ -77,6 +85,43 @@ strong em {
     -webkit-user-drag: none;
 }
 
+.info-button {
+    display: flex;
+    margin-top: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.info-button img {
+    cursor: pointer;
+    image-rendering: pixelated;
+    width:14px;
+    height:14px;
+}
+
+.info-button:hover .info-message {
+    opacity: 1;
+    visibility: visible;
+}
+
+.info-message {
+    position: absolute;
+    padding: 2px;
+    margin-left: 20px;
+    background-color: red;
+    max-width: 200px;
+    width: max-content;
+    z-index: 2;
+    text-wrap: wrap;
+    white-space: normal;
+    overflow-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
 .page {
     color: #f5f9fa;
     background-image: url('assets/backgrounds/polished_oak_planks.png');
@@ -95,9 +140,13 @@ strong em {
     z-index: 0;
 }
 
-.page > * {
+.page > *:not(.header-bar):not(.footer-bar) {
     position: relative;
     z-index: 1;
+}
+
+.page-content {
+    margin-top: 4%;
 }
 
 .logo {
@@ -119,7 +168,10 @@ strong em {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    width: 98%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     image-rendering: pixelated;
     background-color: #30525c;
     padding-right: 2%;
@@ -132,7 +184,9 @@ strong em {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
     margin-top: auto;
     image-rendering: pixelated;
     user-select: none;
