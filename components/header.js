@@ -26,7 +26,7 @@ class Header extends HTMLElement {
                     <ul class="nav-links">
 
                         <li class="logo">
-                            <a href="${new URL('index.html', root)}">
+                            <a href="${root}">
                                 <img src="${new URL('assets/icons/logo.png', root)}" alt="Home">
                             </a>
                         </li>
