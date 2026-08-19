@@ -111,6 +111,12 @@ strong em {
     transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
+@media screen and (max-width: 1024px) {
+    .page-title {
+        padding-top: 20%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .info-message {
         font-size: 85%;
