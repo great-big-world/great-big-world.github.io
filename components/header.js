@@ -89,7 +89,7 @@ class Header extends HTMLElement {
                         <li>
                             <a href="${new URL('about/', root)}">
                                 <div class="rounded-rect">
-                                    <img src="${new URL('assets/icons/wiki.png', root)}" class="header-icon" alt="About">
+                                    <img src="${new URL('assets/icons/about.png', root)}" class="header-icon" alt="About">
                                     <div class="desktop-only">Wiki</div>
                                 </div>
                             </a>
