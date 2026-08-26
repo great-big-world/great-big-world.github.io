@@ -1,6 +1,6 @@
 export async function getModData(modId, modGroups, modFeatureCarousel) {
     const response = await fetch(
-        `https://raw.githubusercontent.com/great-big-world/assets/refs/heads/main/data/submods/${modId}.json`
+        `https://rawcdn.githack.com/great-big-world/assets/refs/heads/main/data/submods/${modId}.json`
     );
 
     const data = await response.json();
