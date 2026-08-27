@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://rawcdn.githack.com/great-big-world/assets/refs/heads/main/assets/icons/favicon.png">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="../js/changelog.js"></script>
     <script type="module" src="../components/header.js"></script>
+    <script type="module" src="../components/changelog_entry.js"></script>
     <script type="module" src="../components/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <title>GBW - Changelog</title>
 </head>
 <body class="page">
@@ -15,6 +19,8 @@
 
     <main class="page-content">
         <h1 class="page-title">Great Big World Changelog</h1>
+
+        <div id="changelog-list"></div>
     </main>
 
     <gbw-footer></gbw-footer>

@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap:0;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.item-container a:link {
+    color: #1bd96a;
+}
+.item-container a:visited {
+    color: #10c0e7;
+}
+.item-container a:active {
+    color: #96ffc2;
+}
+
+.version {
+    text-align: right;
+    background-color: #00000099;
+    padding: 4px 20px;
+    margin-right: 8px;
+}
+
+.version-title {
+    display: flex;
+    gap: 8px;
+}
+
+.change {
+    flex: 1;
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.version-changelog {
+    position: static;
+    height: auto;
+    overflow: visible;
+    background-color: #00000099;
+    margin-bottom: 24px;
+    padding: 12px 20px;
+}
+
+.version-changelog h1,
+.version-changelog h2,
+.version-changelog h3,
+.version-changelog h4,
+.version-changelog p,
+.version-changelog ul,
+.version-changelog ol {
+    position: static;
+    margin: 0 0 10px;
+}
+
+.version-changelog ul,
+.version-changelog ol {
+    padding-left: 20px;
+}
+
+.version-changelog li {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 440px) {
+    .great-big-world-title-2 {
+        display: none;
+    }
+}
