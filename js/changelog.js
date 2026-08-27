@@ -2,7 +2,7 @@ const changelogList = document.getElementById('changelog-list');
 
 async function getVersions() {
     const response = await fetch(
-        "https://api.modrinth.com/v2/project/great-big-world/version?limit=20"
+        "https://api.modrinth.com/v2/project/great-big-world/version?limit=40"
     );
 
     const versions = await response.json();
